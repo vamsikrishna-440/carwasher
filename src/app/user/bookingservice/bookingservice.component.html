@@ -1,0 +1,56 @@
+<div class="container" [formGroup]="BookForm" style="background:rgba(241, 79, 79, 0.8);color:rgb(20, 20, 20);margin-top: 100px">
+        <h2>Booking for Wash/Maintainance</h2>
+        
+          <div class="form-group" >
+            <label >Vehicle Name:</label>
+            <input type="text" class="form-control"  formControlName="vn">
+          </div>
+          <div class="form-group">
+            <label >Vehicle Type:</label>
+            <select class="form-control" formControlName="vt">
+                  <option></option>
+                  <option>Sedan</option>
+                  <option>Hatchback</option>
+                  <option>MUV/SUV</option>
+                  <option>Coupe</option>
+                  <option>Jeep</option>
+                  <option>Convertible</option>
+                  <option>Pickup</option>
+            </select>
+          </div>
+          <div class="form-group">
+                <label >Vehicle Owner Name:</label>
+                <input type="text" class="form-control" formControlName="vo" >
+          </div>
+          <div class="form-group">
+                <label >Vehicle Owner Contact:</label>
+                <input type="text" class="form-control" formControlName="voc" >
+          </div>
+          <label >Service Type (select one):</label>
+          <select class="form-control"  formControlName="st">
+            <option></option>
+            <option>Full Service</option>
+            <option>Car Wash</option>
+            <option>Car Maintainance</option>
+          </select>
+          <div class="form-group">
+                <label >Pick Up:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio"  formControlName="yes" >Yes
+                <input type="radio"   formControlName="no" >No
+          </div>
+          <div class="form-group">
+                <label >Area/Location:</label>
+                <input type="text" class="form-control"  formControlName="area" >
+          </div>
+          <div class="form-group">
+                <label >Pickup Date:</label>
+                <input type="text" class="form-control" formControlName="pd" >
+          </div>
+          <div class="form-group">
+                <label >Pickup Location:</label>
+                <input type="text" class="form-control"  formControlName="pl">
+          </div>
+          <button class="btn btn-dark" (click)="boo(BookForm)">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a routerLink="cancel"><button class="btn btn-danger">Cancel</button></a>
+        
+      </div>

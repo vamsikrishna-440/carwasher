@@ -1,0 +1,24 @@
+<button (click)="get(bookingforms)">Vehicles Booked</button>
+
+<table class="table-dark table-striped" border="2" *ngIf="booked">
+        <tr>
+          <td><b>Vehicle Name</b></td>
+          <td><b>Vehicle-Type</b></td>
+          <td><b>Owner Name</b></td>
+          <td><b>Contact</b></td>
+          <td><b>Service-Type</b></td>
+          <td><b>PickupDate</b></td>
+          <td><b>Location/Area</b></td>
+          <td><b>Pickup Location</b></td>
+        </tr>
+        <tr *ngFor="let s of booked; let i=index">
+          <td>{{s.vname}}</td>
+          <td>{{s.vtype}}</td>
+          <td>{{s.vowner}}</td>
+          <td>{{s.vcontact}}</td>
+          <td>{{s.stype}}</td>
+          <td>{{s.vdate}}</td>
+          <td>{{s.varea}}</td>
+          <td>{{s.vlocation}}</td>
+          <td><button (click)="delPost(g._id.$oid)">Delete</button></td>
+        </tr>

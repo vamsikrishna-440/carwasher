@@ -1,0 +1,12 @@
+<div class="container shadow-lg" 
+    style="background:rgba(241, 79, 79, 0.8);color:rgb(20, 20, 20);margin-top: 100px">
+    <div [formGroup]="UserloginForm">
+           <h1 style="text-align: center">User LogIn Form</h1>
+       <br>
+      <label> UserName:</label> <input class="form-control"  type="text"  formControlName="username"><br>
+      <label>Password:</label> <input class="form-control"  type="text"  formControlName="password"><br>
+       
+        <button (click)="logi()" class="btn btn-success">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-danger">Cancel</button>
+    </div>
+</div>
